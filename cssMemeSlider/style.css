@@ -1,3 +1,92 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 0.625rem;
+    font-family: "Mynerve", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
 h1 {
     color: blueviolet;
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 4.2rem;
 }
+main{
+    height: 100vh;
+    background-color: #f771b4;
+}
+.container {
+    max-width: 90rem;
+    margin: 2rem auto 0;
+    border: 0.5rem solid #994670;
+    border-radius: 2rem;
+    overflow: hidden;
+        background-color: #ffffff;
+}
+.images {
+    width: 400%;
+    display: flex;
+    overflow: hidden;
+    img {
+        width: 25%;
+        height: 60rem;
+        transition: all .8s ease-in-out;
+        border-radius: 2rem;
+        object-fit: cover;
+    }
+}
+.descr {
+    position: relative;
+    z-index: 1;
+    width: 400%;
+    display: flex;
+    overflow: hidden;
+    padding-top: 2rem;
+    font-size: 2.8rem;
+    p {
+        padding-left: 1rem;
+        width: 25%;
+        height: auto;
+        transition: all .8s ease-in-out;
+        span {
+            color: #9c056a;
+            font-weight: 700;
+            font-size: 3.2rem;
+        }
+    }
+}
+input {
+    display: none;
+}
+.labels {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    margin-right: 2rem;
+    margin-top: -3rem;
+    padding-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+
+    label:hover .dot{
+        background-color: #574fc5;
+    }
+    label:focus .dot{
+        border: 2rem solid #574fc5;
+    }
+    label:active .dot{
+        background-color: #51ddf0;
+    }
+}
+.dot {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color:#9c056a;
+    transition: all 0.8s ease-out;
+}
+ 
