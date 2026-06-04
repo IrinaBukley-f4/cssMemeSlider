@@ -72,13 +72,18 @@ input {
     display: flex;
     justify-content: flex-end;
     order: 1;
-    gap: 2rem;
+    gap: 1rem;
     margin-right: 2rem;
     margin-top: 2rem;
     padding-bottom: 2rem;
     position: relative;
     z-index: 2;
+    label {
+        padding: 10px;
+        cursor: pointer;
+    }
 }
+
 .dot {
     width: 1.5rem;
     height: 1.5rem;
@@ -97,7 +102,6 @@ label:active .dot{
     background-color: #51ddf0;
 }
 
- 
 /* подсветка активной точки */
 #first:checked ~ .labels .one {
     background-color: inherit;
@@ -115,7 +119,6 @@ label:active .dot{
     background-color: inherit;
     border: 3px solid #9c056a;
 }
-
 
 #first:checked ~ .images .img-visible {
     margin-left: 0%;
