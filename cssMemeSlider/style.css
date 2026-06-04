@@ -31,13 +31,13 @@ main{
     width: 400%;
     display: flex;
     overflow: hidden;
-    img {
-        width: 25%;
-        height: 60rem;
-        transition: all .8s ease-in-out;
-        border-radius: 2rem;
-        object-fit: cover;
-    }
+}
+.img {
+    width: 25%;
+    height: 60rem;
+    transition: all .8s ease-in-out;
+    border-radius: 2rem;
+    object-fit: cover;
 }
 .descr {
     position: relative;
@@ -47,19 +47,20 @@ main{
     overflow: hidden;
     padding-top: 2rem;
     font-size: 2.8rem;
-    p {
-        padding-left: 1rem;
-        width: 25%;
-        height: auto;
-        transition: all .8s ease-in-out;
-        span {
-            color: #9c056a;
-            font-weight: 700;
-            font-size: 3.2rem;
-        }
+    
+}
+.text {
+    padding-left: 1rem;
+    width: 25%;
+    height: auto;
+    transition: all .8s ease-in-out;
+    span {
+        color: #9c056a;
+        font-weight: 700;
+        font-size: 3.2rem;
     }
 }
-input {
+input[name="radio"] {
     display: none;
 }
 .labels {
@@ -71,16 +72,6 @@ input {
     padding-bottom: 2rem;
     position: relative;
     z-index: 2;
-
-    label:hover .dot{
-        background-color: #574fc5;
-    }
-    label:focus .dot{
-        border: 2rem solid #574fc5;
-    }
-    label:active .dot{
-        background-color: #51ddf0;
-    }
 }
 .dot {
     width: 1.5rem;
@@ -89,4 +80,53 @@ input {
     background-color:#9c056a;
     transition: all 0.8s ease-out;
 }
+label:hover .dot{
+    background-color: #574fc5;
+    cursor: pointer;
+}
+label:focus .dot{
+    border: 2rem solid #574fc5;
+}
+label:active .dot{
+    background-color: #51ddf0;
+}
+
  
+#first:checked + .one {
+    background-color: #a404e4;
+}
+#second:checked + .two {
+    background-color: #a404e4;
+}
+#third:checked + .three {
+    background-color: #a404e4;
+}
+#fourth:checked + .four {
+    background-color: #a404e4;
+}
+
+#first:checked ~ .images .img-visible {
+    margin-left: 0%;
+}
+#second:checked ~ .images .img-visible {
+    margin-left: -25%;
+}
+#third:checked ~ .images .img-visible {
+    margin-left: -50%;
+}
+#fourth:checked ~ .images .img-visible {
+    margin-left: -75%;
+}
+
+#first:checked ~ .descr .text-visible {
+    margin-left: 0%;
+}
+#second:checked ~ .descr .text-visible {
+    margin-left: -25%;
+}
+#third:checked ~ .descr .text-visible {
+    margin-left: -50%;
+}
+#fourth:checked ~ .descr .text-visible {
+    margin-left: -75%;
+}
