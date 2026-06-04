@@ -37,7 +37,7 @@ main{
         width: 25%;
         height: 60rem;
         transition: all .8s ease-in-out;
-        border-radius: 2rem;
+        border-radius: 0 0 2rem 2rem;
         object-fit: cover;
     }
 }
