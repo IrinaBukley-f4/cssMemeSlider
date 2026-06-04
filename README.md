@@ -1,1 +1,1 @@
-# cssMemeSlider
+https://IrinaBukley-f4.github.io/cssMemeSlider/cssMemeSlider/index.html
